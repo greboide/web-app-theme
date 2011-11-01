@@ -1,6 +1,6 @@
 <% columns.each do |column| %>
   <div class="group">
-    <%%= f.<%= model_name.reflect_on_association :column ? :association : :input %> :<%= column.name %> %>
+    <%%= f.<%= (eval model_name).reflect_on_association :column ? :association : :input %> :<%= column.name %> %>
   </div>
 <%- end -%>        
 <div class="group navform wat-cf">
